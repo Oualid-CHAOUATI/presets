@@ -1,0 +1,142 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+[class*="flex"]{
+    display: flex;
+    &.inverse{
+        flex-direction: row-reverse;
+    }
+}
+[class*="iflex"]{
+    display: inline-flex;
+}
+
+.f-center-align{
+    align-items: center;
+
+}
+.f-center-justify{
+    justify-content: center;
+}
+
+
+
+.iflex,.flex{
+    &-center{
+        @extend .f-center-align;
+        @extend .f-center-justify;
+    }
+}
+.f-gap-0p5{
+    gap: .5em;
+}
+.f-gap-1{
+    gap: 1em;
+}
+.f-gap-2{
+    gap: 2em;
+}
+.f-gap-3{
+    gap: 3em;
+}
+[class*="flex"]{
+   
+
+    &.f-wrap{
+        flex-wrap: wrap;
+
+    }
+    &.f-column{
+        flex-direction: column;
+        &.f-inverse{
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.ib{
+    display: inline-block;
+}
+
+.none{
+    display: none;
+}
+.grid{
+    display: grid;
+    &-center{
+        place-items: center;
+    }
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+.btn{
+    @extend .pointer;
+}
+input,button{
+    font-size: inherit;
+    color: inherit;
+}
+
+.overflow-hide{
+    overflow: hidden;
+}
+
+
+.center-text{
+    text-align: center;
+}
+
+.center-margin{
+    margin-inline: auto;
+}
+
+.link-style{
+    text-decoration: underline;
+    padding: 0;
+    background: none;
+    border: 0;
+    width: max-content;
+}
+
+
+.hide{
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.error-message{
+    background-color: red;
+    padding: 1em;
+    &::before{
+        content: "!";
+        $s:1em;
+        height: $s;
+        aspect-ratio: 1;
+        display: inline-block;
+        background-color: #fff;
+        color: red;
+        text-align: center;
+        margin-right: .8em;
+        line-height: $s;
+        border-radius: 50%;
+        padding: .3em;
+        box-sizing: content-box;
+    }
+}
+
+
+.f-grow-1{
+
+
+    flex-grow: 1;
+}

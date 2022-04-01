@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[class*=flex] {
+  display: flex;
+}
+[class*=flex].inverse {
+  flex-direction: row-reverse;
+}
+
+[class*=iflex] {
+  display: inline-flex;
+}
+
+.f-center-align, .iflex-center, .flex-center {
+  align-items: center;
+}
+
+.f-center-justify, .iflex-center, .flex-center {
+  justify-content: center;
+}
+
+.f-gap-0p5 {
+  gap: 0.5em;
+}
+
+.f-gap-1 {
+  gap: 1em;
+}
+
+.f-gap-2 {
+  gap: 2em;
+}
+
+.f-gap-3 {
+  gap: 3em;
+}
+
+[class*=flex].f-wrap {
+  flex-wrap: wrap;
+}
+[class*=flex].f-column {
+  flex-direction: column;
+}
+[class*=flex].f-column.f-inverse {
+  flex-direction: column-reverse;
+}
+
+.ib {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.grid {
+  display: grid;
+}
+.grid-center {
+  place-items: center;
+}
+
+.pointer, .btn {
+  cursor: pointer;
+}
+
+input, button {
+  font-size: inherit;
+  color: inherit;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-margin {
+  margin-inline: auto;
+}
+
+.link-style {
+  text-decoration: underline;
+  padding: 0;
+  background: none;
+  border: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.error-message {
+  background-color: red;
+  padding: 1em;
+}
+.error-message::before {
+  content: "!";
+  height: 1em;
+  aspect-ratio: 1;
+  display: inline-block;
+  background-color: #fff;
+  color: red;
+  text-align: center;
+  margin-right: 0.8em;
+  line-height: 1em;
+  border-radius: 50%;
+  padding: 0.3em;
+  box-sizing: content-box;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}/*# sourceMappingURL=presets.css.map */
